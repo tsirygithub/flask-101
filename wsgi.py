@@ -12,9 +12,9 @@ def hello():
     return c
 
 @app.route("/api/v1/produits")
-def get_current_user():
-    return jsonify(
-        username=g.user.username,
-        email=g.user.email,
-        id=g.user.id,
-    )
+def produits():
+    PRODUCTS = {
+        1: { 'id': 1, 'name': 'Skello' },
+        2: { 'id': 2, 'name': 'Socialive.tv' },
+    }
+    return PRODUCTS
